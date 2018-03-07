@@ -34,6 +34,18 @@ def help(message):
     botで困ったことがあったり機能を追加したい場合は @zukkey にメンションを投げてね！
     """)
 
+@respond_to("なぜ")
+@respond_to("なんで")
+@respond_to("何故")
+@respond_to("why")
+def why(message):
+    message.send("""
+    お花見は楽しいもの!!\n
+    楽しい…？楽しいぃぃぃ…??\n
+    楽しいいいいぃぃぃいいンゴおおぉぉぉぉwwwwWWW\n
+    ということで「楽しんご」です。以上です。
+    """)
+
 @respond_to("持ち物")
 @respond_to("もちもの")
 def have(message):
@@ -68,6 +80,6 @@ def question(message):
     ```
     """)
 
-@respond_to("ラブ注入！")
+@respond_to("ラブ注入")
 def love(message):
     message.reply("そんなあなたにラブ注入！")
