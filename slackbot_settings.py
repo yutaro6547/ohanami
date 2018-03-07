@@ -1,0 +1,3 @@
+API_TOKEN = 'YOUR_SLACK_CHANNEL_TOKEN'
+
+PLUGINS = ['plugins']
