@@ -1,0 +1,5 @@
+version: "2"
+services:
+  tanoshingo:
+    image: asia.gcr.io/${PROJECT_NAME}/tanoshingo:$CIRCLE_SHA1
+    command: /bin/bash -c "ls"
