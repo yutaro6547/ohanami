@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: tanoshingo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tanoshingo
+    spec:
+      containers:
+      - name: tanoshingo
+        image: asia.gcr.io/boxp-tk/tanoshingo:${CIRCLE_SHA1}
+        env:
+          - name: SLACK_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: tanoshingo
+                key: slack-token
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 10m

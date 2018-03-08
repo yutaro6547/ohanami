@@ -1,3 +1,5 @@
-API_TOKEN = 'YOUR_SLACK_CHANNEL_TOKEN'
+import os
+
+API_TOKEN = os.environ["SLACK_TOKEN"]
 
 PLUGINS = ['plugins']
