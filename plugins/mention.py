@@ -9,6 +9,7 @@ def default(message):
 
 @respond_to("いつ")
 @respond_to("何時")
+@respond_to("when")
 def when(message):
     message.send("""
     ```
@@ -47,6 +48,7 @@ def why(message):
 
 @respond_to("持ち物")
 @respond_to("もちもの")
+@respond_to("have")
 def have(message):
     message.send("""
     ```
@@ -60,6 +62,7 @@ def have(message):
     """)
 
 @respond_to("フードアンケート")
+@respond_to("アンケート")
 def question(message):
     message.send("""
     ```
