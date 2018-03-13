@@ -9,13 +9,14 @@ def default(message):
 
 @respond_to("いつ")
 @respond_to("何時")
+@respond_to("when")
 def when(message):
     message.send("""
     ```
     楽しんごによるお花見案内～～
     2018年のお花見は以下の日程で開かれるよ！
-    ・日時：４月１４日(土)　(仮)10:00 ~ 17:00
-    ・場所：芝公園
+    ・日時：４月１４日(土)　11:00 ~ 16:00
+    ・場所：代々木公園
     ※雨天の場合はAgoraでみんなで語り合うことになります
     ご家族でもペットも恋人もお友達も大歓迎です！
     ```
@@ -47,6 +48,7 @@ def why(message):
 
 @respond_to("持ち物")
 @respond_to("もちもの")
+@respond_to("have")
 def have(message):
     message.send("""
     ```
@@ -60,6 +62,7 @@ def have(message):
     """)
 
 @respond_to("フードアンケート")
+@respond_to("アンケート")
 def question(message):
     message.send("""
     ```
